@@ -1,5 +1,3 @@
-// script.js extraído de index.html
-
 // Função para alternar menu mobile
 function toggleMobileMenu() {
   const nav = document.getElementById("navigation");
