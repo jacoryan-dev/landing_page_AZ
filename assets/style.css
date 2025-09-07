@@ -195,11 +195,12 @@ nav a:hover {
 /*Mulher lendo*/
 .hero-background {
   position: absolute;
-width: 1500px;
+  width: 1500px;
   height: 800px;
   left: -40px;
   top: -319px;
-  background: linear-gradient(138.29deg, rgba(0, 0, 0, 0) 67.34%, rgba(14, 38, 70, 0.7) 96.67%),
+  background:
+    linear-gradient(138.29deg, rgba(0, 0, 0, 0) 67.34%, rgba(14, 38, 70, 0.7) 96.67%),
     linear-gradient(0deg, rgba(27, 66, 113, 0.5), rgba(27, 66, 113, 0.5)),
     url("/Images/woman-reading.png");
   transform: rotate(-30deg);
@@ -207,9 +208,7 @@ width: 1500px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
 }
-
 
 
 
@@ -326,7 +325,7 @@ width: 1500px;
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5rem;
   background: #ffffff;
   background-clip: text;
 }
@@ -338,7 +337,7 @@ width: 1500px;
 }
 .hero-cta {
   display: inline-block;
-  background: linear-gradient(135deg, #6bb6ff 0%, #4a90e2 100%);
+  background: rgba(53, 116, 177, 1);
   color: var(--text-white);
   padding: 1rem 3rem;
   border-radius: 50px;
