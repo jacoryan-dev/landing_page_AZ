@@ -601,23 +601,12 @@ nav a:hover {
   line-height: 1.5;
 }
 
-/* Responsividade */
-@media (max-width: 1280px) {
-  .pricing-container {
-    grid-template-columns: 400px 1fr;
-    gap: 5rem;
-  }
-  .price-card {
-    margin-left: -140px;
-  }
-  .phone-mockup {
-    right: -40px;
-    width: 360px;
-  }
-}
 
-/* <= 1024px (laptops) */
-@media (max-width: 1024px) {
+/* Responsividade seção de benefícios*/
+
+/* Responsividade */
+/* <= 1440px (desktop) */
+@media (max-width: 1440px) {
   .pricing-section {
     padding: 64px 1.5rem;
   }
@@ -626,7 +615,7 @@ nav a:hover {
     gap: 4rem;
   }
   .price-card {
-    margin-left: -60px; /* reduz o deslocamento negativo */
+    margin-left: -60px; /* deslocamento negativo */
     padding: 2.5rem;
     min-height: 360px;
   }
@@ -643,14 +632,44 @@ nav a:hover {
   }
 }
 
+/* <= 1280px (laptops) */
+@media (max-width: 1280px) {
+  .pricing-section {
+    padding: 64px 1.5rem;
+  }
+  .pricing-container {
+    grid-template-columns: 360px 1fr;
+    gap: 4rem;
+  }
+  .price-card {
+    margin-left: -60px; /* deslocamento negativo */
+    padding: 2.5rem;
+    min-height: 360px;
+  }
+  .price-header {
+    max-width: 260px;
+  }
+  .price-amount {
+    font-size: 2.6rem;
+  }
+  .phone-mockup {
+    right: -50px;
+    top: -10%;
+    width: 300px;
+  }
+}
+
+
 /* <= 900px (tablets em landscape/portrait) */
 @media (max-width: 900px) {
   .pricing-container {
-    grid-template-columns: 1fr; /* empilha */
+    display: flex;
+    flex-direction: column;
     gap: 3.5rem;
   }
   .price-card {
-    max-width: 680px;
+    order: 2;
+    width: 680px;
     align-items: center;
     align-content: center;
     margin-left: 50px;
@@ -658,10 +677,11 @@ nav a:hover {
   .phone-mockup {
     position: absolute;
     right: -50px;
-    top: -10%;
-    width: 300px;
+    top: -30%;
+    width: 350px;
   }
   .benefits-card {
+    order: 1;
     padding-left: 0;
     margin-top: 1rem;
   }
@@ -690,8 +710,8 @@ nav a:hover {
   }
   .phone-mockup {
     right: -24px;
-    width: 220px;
-    top: -6%;
+    width: 300px;
+    top: -25%;
   }
 }
 
@@ -709,8 +729,8 @@ nav a:hover {
   }
   .phone-mockup {
     right: -18px;
-    width: 190px;
-    top: 6%;
+    width: 250px;
+    top: -5%;
   }
   .benefits-title {
     font-size: 1.6rem;
@@ -734,7 +754,7 @@ nav a:hover {
   }
   .phone-mockup {
     right: -14px;
-    width: 160px;
+    width: 200px;
     top: 10%;
   }
   .benefit-icon {
@@ -762,6 +782,9 @@ nav a:hover {
     top: 10%;
   }
 }
+
+
+
 
 /* Seção de Destaque "Tudo em um só lugar" */
 .highlight-section {
