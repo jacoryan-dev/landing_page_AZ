@@ -1412,6 +1412,13 @@ nav a:hover {
   text-align: center;
 }
 
+.card-3 .card-cta {
+    position: absolute;
+    top: 85%;
+    right: -100%;
+    z-index: 3;
+  }
+
 .card-cta:hover {
   background: #4A90E2;
   transform: translateY(-3px);
@@ -1431,6 +1438,13 @@ nav a:hover {
   .card-title {
     font-size: 40px;
     line-height: 48px;
+  }
+
+  .card-3 .card-cta {
+    position: absolute;
+    top: 85%;
+    right: -70%;
+    z-index: 3;
   }
 }
 
@@ -1462,6 +1476,14 @@ nav a:hover {
     font-size: 18px;
     line-height: 26px;
   }
+
+  .card-3 .card-cta {
+    position: absolute;
+    top: 85%;
+    right: -50%;
+    z-index: 3;
+  }
+
 }
 
 @media (max-width: 900px) {
@@ -1494,6 +1516,12 @@ nav a:hover {
 
   .card-2 .card-content {
     order: 2;
+  }
+
+  .card-3 .card-cta {
+    display: flex;
+    position: static;
+    align-items: center;
   }
 }
 
@@ -1594,3 +1622,4 @@ nav a:hover {
     line-height: 22px;
   }
 }
+
