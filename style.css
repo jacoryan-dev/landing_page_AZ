@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
+/* Estilos gerais do corpo da página */
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Rodapé - CONTAINER PRINCIPAL */
+.footer {
+    background-color: #1B4271;
+    color: #DCDCDC;
+    width: 100%;
+    height: 492px; 
+    margin: 0 auto;
+}
+
+/* Container para as três colunas */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    padding-top: 59px;
+    height: calc(100% - 59px);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilo para cada coluna */
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 234px;
+    height: 100%;
+}
+
+/* Logo */
+.footer-logo {
+    width: 228.26px;
+    height: 40.79px;
+    margin-top: 59px;
+}
+
+.spacer {
+    height: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo dos títulos (h3) */
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-top: 59px;
+}
+
+/* Estilo das listas (ul) e links */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    font-size: 18px;
+    font-weight: 400;
+    color: #DCDCDC;
+    text-decoration: none;
+    line-height: 1.6; 
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Container das informações de contato */
+.contact-info-list p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #DCDCDC;
+    line-height: 1.6; 
+    margin: 0;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #FFFFFF;
+}
+
+/* Container que agrupa os ícones de redes sociais */
+.footer-social-icons {
+    margin-top: 35px; 
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-icons a {
+    color: #FFFFFF !important;
+    font-size: 30px;
+    margin: 0; 
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.eject-dedication {
+    margin-top: auto;
+    font-size: 18px;
+    color: #DCDCDC;
+}
+
+/* --------------------------------------------------------------------- */
+
+/** Estilos responsivos para telas menores que 768px **/
+@media (max-width: 768px) {
+    .footer-container {
+        /* Permite que as colunas se empilhem */
+        flex-direction: column; 
+        /* Centraliza o conteúdo horizontalmente */
+        align-items: center; 
+        /* Remove o padding lateral para ocupar a tela inteira */
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .footer-col {
+        /* Faz com que cada coluna ocupe a largura total */
+        min-width: 100%;
+        /* Adiciona espaço entre as colunas empilhadas */
+        margin-bottom: 40px; 
+        /* Centraliza o texto dentro de cada coluna */
+        text-align: center;
+        /* Altera o alinhamento para o topo */
+        align-items: center;
+        /* Reduz a altura para que o conteúdo se ajuste */
+        height: auto;
+    }
+    .eject-dedication {
+        /* Remove a margem automática para que o texto fique centralizado */
+        margin-top: 20px; 
+    }
+    .footer-logo, h3 {
+        /* Reduz o tamanho da margem superior para telas menores */
+        margin-top: 0;
+    }
+    .footer-logo {
+        /* Centraliza a logo */
+        margin: 0 auto 20px auto;
+    }
+    .footer-social-icons {
+        /* Centraliza os ícones */
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
