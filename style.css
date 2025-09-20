@@ -2044,7 +2044,8 @@ nav a:hover {
     font-size: 16px;
     font-weight: 400;
     opacity: 0.8;
-    margin-top: 60%;
+    margin-top: 10%;
+    margin-right: 75px;
 }
 
 .contact-info {
@@ -2107,9 +2108,12 @@ nav a:hover {
     order: -1;       
     flex: 1 1 100%;
   }
-  .copyright { 
+
+  .copyright{ 
+    text-align: center;
     margin-top: 20px; 
   }
+
   .brand-logo { justify-items: start; }
 }
 
