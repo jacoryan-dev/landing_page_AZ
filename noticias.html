@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AZ Fell | Blog</title>
+    <title>Noticias|AZ Fell</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="blog-styles.css" />
+    <link rel="stylesheet" href="noticia-styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Barra de Navegação -->
@@ -190,378 +194,255 @@
       </div>
     </header>
 
-    <!-- Conteúdo Principal -->
-    <main class="blog-main">
-      <div class="blog-container">
-        <h1 class="blog-title">Blog</h1>
+    <!-- Artigo em Destaque -->
+    <main class="article-layout">
+      <article class="article-content">
+        <h1 class="article-title">
+          Resenha: O clássico que você precisa ler
+        </h1>
 
-        <!-- Postagens em Destaque -->
-        <section class="featured-posts">
-          <h2 class="section-title">Postagens mais lidas</h2>
-          <div class="carousel-wrapper">
-            <button class="carousel-btn prev" onclick="moveCarousel(-1)">
-              ‹
-            </button>
-            <div class="featured-carousel">
-              <div class="carousel-track">
-                <article
-                  class="featured-card"
-                  style="cursor: pointer"
-                  onclick="openModal({
-                                image: 'Images/img1-blog.jpg',
-                                title: 'Resenha: O clássico que você precisa ler',
-                                content: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed eleifend ferri duis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-                                tag: 'Resenha',
-                                date: '08/09/2025',
-                                author: 'Por Equipe AZ Fell',
-                                link: '/blog/resenha-classico'
-                            })"
-                >
-                  <img
-                    src="Images/img1-blog.jpg"
-                    alt="Resenha de um livro clássico"
-                  />
-                  <div class="card-content">
-                    <span class="category-tag tag-resenha">Resenha</span>
-                    <h3>Resenha: O clássico que você precisa ler</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                      Sed eleifend ferri duis.
-                    </p>
-                    <div class="post-meta">
-                      <span class="author">Por Equipe AZ Fell</span>
-                      <span class="date">08/09/2025</span>
-                    </div>
-                  </div>
-                </article>
-
-                <article
-                  class="featured-card"
-                  style="cursor: pointer"
-                  onclick="openModal({
-                                image: 'Images/img2-blog.jpg',
-                                title: 'Como organizar sua estante virtual',
-                                content: 'Lorem ipsum dolor sit amet consectetur adipiscing elit imperdiet ferri duis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.',
-                                tag: 'Dica de Leitura',
-                                date: '08/09/2025',
-                                author: 'Por Leitor Convidado',
-                                link: '/blog/organizar-estante-virtual'
-                            })"
-                >
-                  <img
-                    src="Images/img2-blog.jpg"
-                    alt="Dicas de como organizar sua estante virtual"
-                  />
-                  <div class="card-content">
-                    <span class="category-tag tag-dicas">Dicas</span>
-                    <h3>Como organizar sua estante virtual</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipiscing elit
-                      imperdiet ferri duis.
-                    </p>
-                    <div class="post-meta">
-                      <span class="author">Por Leitor Convidado</span>
-                      <span class="date">08/09/2025</span>
-                    </div>
-                  </div>
-                </article>
-
-                <article
-                  class="featured-card"
-                  style="cursor: pointer"
-                  onclick="openModal({
-                                image: 'Images/img3-blog.jpg',
-                                title: 'Os grandes lançamentos de Setembro',
-                                content: 'Lorem ipsum dolor sit amet consectetur adipiscing elit accumsan ferri duis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.',
-                                tag: 'Lançamentos',
-                                date: '08/09/2025',
-                                author: 'Por Equipe AZ Fell',
-                                link: '/blog/lancamentos-setembro'
-                            })"
-                >
-                  <img
-                    src="Images/img3-blog.jpg"
-                    alt="Lançamentos do mês de Setembro"
-                  />
-                  <div class="card-content">
-                    <span class="category-tag tag-lancamentos"
-                      >Lançamentos</span
-                    >
-                    <h3>Os grandes lançamentos de Setembro</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipiscing elit
-                      accumsan ferri duis.
-                    </p>
-                    <div class="post-meta">
-                      <span class="author">Por Equipe AZ Fell</span>
-                      <span class="date">08/09/2025</span>
-                    </div>
-                  </div>
-                </article>
-              </div>
+        <div class="article-meta">
+          <div class="author-info">
+            <img
+              src="Images/betinho.png"
+              alt="Foto do autor do post"
+              class="author-avatar"
+            />
+            <div class="author-details">
+              <span class="author-name">Por Equipe AZ Fell</span>
+              <span class="publish-date">08/09/2025</span>
             </div>
-            <button class="carousel-btn next" onclick="moveCarousel(1)">
-              ›
-            </button>
           </div>
-        </section>
+          <span class="category-tag tag-resenha">Resenha</span>
+        </div>
 
-        <!-- Controles de Filtro -->
-        <div class="controls-section">
-          <div class="filter-controls">
-            <div class="dropdown-wrapper">
-              <button
-                class="control-btn filter-btn"
-                onclick="toggleDropdown('filter')"
-              >
-                <svg
-                  width="16"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.5038 24C10.0799 24 9.72461 23.8563 9.43784 23.5688C9.15108 23.2812 9.0077 22.925 9.0077 22.5V13.5L0.330033 2.4C-0.0440044 1.9 -0.10011 1.375 0.161716 0.825C0.423542 0.275 0.878621 0 1.52695 0H22.473C23.1214 0 23.5765 0.275 23.8383 0.825C24.1001 1.375 24.044 1.9 23.67 2.4L14.9923 13.5V22.5C14.9923 22.925 14.8489 23.2812 14.5622 23.5688C14.2754 23.8563 13.9201 24 13.4961 24H10.5038ZM12 12.45L19.4059 3H4.59406L12 12.45Z"
-                    fill="white"
-                  />
-                </svg>
-                Filtrar
-              </button>
-              <div id="filter-dropdown" class="dropdown-menu">
-                <label
-                  ><input type="checkbox" value="resenhas"  /> Resenhas</label
-                >
-                <label
-                  ><input type="checkbox" value="noticias" class="noticia" /> Notícias </label
-                >
-                <label
-                  ><input type="checkbox" value="lancamentos" class="lancamento" /> Lançamentos</label
-                >
-                <label
-                  ><input type="checkbox" value="dicas" class="dica"/>
-                  Dicas de Leitura</label
-                >
-              </div>
-            </div>
-
-            <!-- Controles de Ordenação -->
-            <div class="dropdown-wrapper">
-              <button
-                class="control-btn sort-btn"
-                onclick="toggleDropdown('sort')"
-              >
-                <svg
-                  width="16"
-                  height="24"
-                  viewBox="0 0 32 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0 24V20H10.6667V24H0ZM0 14V10H21.3333V14H0ZM0 4V0H32V4H0Z"
-                    fill="white"
-                  />
-                </svg>
-                Ordenar
-              </button>
-              <div id="sort-dropdown" class="dropdown-menu">
-                <label
-                  ><input type="radio" name="sort" value="recent" checked />
-                  Mais recentes</label
-                >
-                <label
-                  ><input type="radio" name="sort" value="old" /> Mais
-                  antigos</label
-                >
-                <label
-                  ><input type="radio" name="sort" value="popular" /> Mais
-                  populares</label
-                >
-              </div>
-            </div>
+        <!-- Compartilhamento -->
+        <div class="share-wrapper">
+          <button class="btn-share" onclick="toggleShareMenu(this)">
+            <i class="fas fa-share-alt"></i> Compartilhar
+          </button>
+          <div class="share-dropdown">
+            <a href="#" class="share-item"
+              ><i class="fab fa-whatsapp"></i> </a
+            >
+            <a href="#" class="share-item"
+              ><i class="fab fa-instagram"></i></a
+            >
+            <a href="#" class="share-item"
+              ><i class="fab fa-x-twitter"></i>X</a
+            >
+            <a href="#" class="share-item"
+              ><i class="fas fa-link"></i></a
+            >
+            <a href="#" class="share-item"
+              ><i class="fas fa-envelope"></i></a
+            >
           </div>
         </div>
 
-        <!-- Postagens em Lista -->
-        <section class="posts-list">
-          <article
-            class="post-item"
-            style="cursor: pointer"
-            onclick="openModal({
-                    image: 'Images/tendencias.jpg',
-                    title: 'As 5 tendências literárias para 2025',
-                    content: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.',
-                    tag: 'Notícia',
-                    date: '06/09/2025',
-                    author: 'Por Equipe AZ Fell',
-                    link: '/blog/tendencias-literarias-2025'
-                })"
-          >
+
+        <figure class="article-image">
+          <img
+            src="Images/img1-blog.jpg"
+            alt="Imagem ilustrativa do artigo"
+          />
+          <figcaption>Imagem ilustrativa.</figcaption>
+        </figure>
+
+        <div class="article-body">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lectus  lectus, 
+            pulvinar vel congue sit amet, tempus vitae neque. Etiam pharetra consequat nulla. 
+            Nunc laoreet lacus ac dui eleifend, luctus bibendum  arcu tempus. 
+            Donec non mi at dui consectetur faucibus in ut velit. 
+            Vestibulum velit libero, tincidunt et hendrerit at, fermentum nec enim.  
+            In congue ante eget dui efficitur malesuada nec a nibh. 
+            Vestibulum sit  amet justo enim. Fusce vulputate nulla ut blandit tristique. 
+            Phasellus  mattis, dolor id maximus dapibus, nulla felis hendrerit velit, sodales  volutpat ante leo eu erat. 
+          </p>
+
+          <p>
+            Nulla non enim neque. Etiam sem odio, iaculis ut vehicula id, sodales sed velit. 
+            Maecenas dapibus neque id leo  viverra, at bibendum purus blandit. 
+            Vivamus nulla ante, congue id metus  sed, viverra commodo sapien. 
+            Suspendisse congue, justo eu rutrum  sagittis, erat quam pellentesque sapien, quis placerat dolor tellus a  leo.
+
+          </p>
+
+          <p class="highlight">
+            Orci varius natoque penatibus et magnis 
+            dis parturient montes, nascetur ridiculus mus. 
+            Integer in tortor accumsan fringilla.
+          </p>
+
+          <p>
+            In vehicula lectus feugiat orci hendrerit, quis posuere massa tincidunt. 
+            Quisque pharetra ante sit amet luctus luctus. 
+            Donec pulvinar at diam  non tempus. Nunc leo leo, lobortis nec ipsum quis, 
+            venenatis suscipit  magna. Etiam molestie volutpat augue eu condimentum. 
+            Suspendisse  potenti. Vestibulum vel varius risus. Pellentesque habitant morbi  
+            tristique senectus et netus et malesuada fames ac turpis egestas. Ut mi  augue, 
+            mollis in dignissim ac, maximus ac massa.
+
+          </p>
+ 
+          <p>
+        Vestibulum vitae iaculis nulla, at finibus sem. Cras sagittis mauris id  ante euismod tempus. Nam in lectus lorem. Aliquam mollis nisl neque, id  dictum dui imperdiet sed. Nulla tincidunt, odio sit amet mattis commodo, felis nulla feugiat leo, in lacinia nulla justo non tortor. Fusce  congue vehicula ex a suscipit. Cras a mi elementum, pulvinar velit vel,  congue nulla. Pellentesque consequat sem vitae pretium laoreet.  Suspendisse sodales euismod elit molestie finibus.
+          </p>
+        </div>
+
+        <!-- Compartilhamento -->
+        <div class="share-wrapper">
+          <button class="btn-share" onclick="toggleShareMenu(this)">
+            <i class="fas fa-share-alt"></i> Compartilhar
+          </button>
+          <div class="share-dropdown">
+            <a href="#" class="share-item"
+              ><i class="fab fa-whatsapp"></i> </a
+            >
+            <a href="#" class="share-item"
+              ><i class="fab fa-instagram"></i></a
+            >
+            <a href="#" class="share-item"
+              ><i class="fab fa-x-twitter"></i>X</a
+            >
+            <a href="#" class="share-item"
+              ><i class="fas fa-link"></i></a
+            >
+            <a href="#" class="share-item"
+              ><i class="fas fa-envelope"></i></a
+            >
+          </div>
+        </div>
+      </article>
+
+        <!-- Barra lateral -->
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Leia também</h2>
+
+        <div class="sidebar-posts">
+          <div class="sidebar-post-card">
+            <img
+              src="Images/img2-blog.jpg"
+              alt="Livros em uma estante"
+              class="post-thumb"
+            />
+            <div class="post-info">
+              <h3 class="post-title">Como organizar sua estante virtual</h3>
+              <span class="post-author">Por Leitor Convidado</span>
+              <div class="post-meta">
+                <span class="post-date">08/09/2025</span>
+                 <span class="category-tag tag-dicas">Dicas</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-post-card">
+            <img
+              src="Images/img3-blog.jpg"
+              alt="Pilha de livros"
+              class="post-thumb"
+            />
+            <div class="post-info">
+              <h3 class="post-title">Os grandes lançamentos de Setembro</h3>
+              <span class="post-author">Por Equipe AZ Fell</span>
+              <div class="post-meta">
+                <span class="post-date">08/09/2025</span>
+                <span class="category-tag tag-lancamentos">Novidade</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-post-card">
             <img
               src="Images/tendencias.jpg"
-              alt="As 5 tendências literárias para 2025"
+              alt="Tendências literárias"
               class="post-thumb"
             />
-            <div class="post-content">
-              <h3>As 5 tendências literárias para 2025</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                faucibus ex sapien vitae pellentesque sem placerat. In id cursus
-                mi pretium tellus duis convallis tempus leo eu aenean sed diam.
-              </p>
+            <div class="post-info">
+              <h3 class="post-title">
+                As 5 tendências literárias para 2025
+              </h3>
+              <span class="post-author">Por Equipe AZ Fell</span>
               <div class="post-meta">
+                <span class="post-date">06/09/2025</span>
                 <span class="category-tag tag-noticia">Notícia</span>
-                <span class="author">Por Equipe AZ Fell</span>
-                <span class="date">06/09/2025</span>
               </div>
             </div>
-          </article>
+          </div>
 
-          <article
-            class="post-item"
-            style="cursor: pointer"
-            onclick="openModal({
-                    image: 'Images/clube-do-livro.jpg',
-                    title: 'Como criar um clube do livro online',
-                    content: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.',
-                    tag: 'Dica de Leitura',
-                    date: '06/09/2025',
-                    author: 'Por Leitor Convidado',
-                    link: '/blog/clube-livro-online'
-                })"
-          >
+          <div class="sidebar-post-card">
             <img
               src="Images/clube-do-livro.jpg"
-              alt="Como criar um clube do livro online"
+              alt="Pessoa lendo um e-reader"
               class="post-thumb"
             />
-            <div class="post-content">
-              <h3>Como criar um clube do livro online</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                faucibus ex sapien vitae pellentesque sem placerat. In id cursus
-                mi pretium tellus duis convallis tempus leo eu aenean sed diam.
-              </p>
+            <div class="post-info">
+              <h3 class="post-title">Como criar um clube do livro online</h3>
+              <span class="post-author">Por Leitor Convidado</span>
               <div class="post-meta">
+                <span class="post-date">06/09/2025</span>
                 <span class="category-tag tag-dicas">Dicas</span>
-                <span class="author">Por Leitor Convidado</span>
-                <span class="date">06/09/2025</span>
               </div>
             </div>
-          </article>
+          </div>
 
-          <article
-            class="post-item"
-            style="cursor: pointer"
-            onclick="openModal({
-                    image: 'Images/resenha.png',
-                    title: 'Resenha: A Biblioteca da Meia-Noite',
-                    content: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-                    tag: 'Resenha',
-                    date: '06/09/2025',
-                    author: 'Por Equipe AZ Fell',
-                    link: '/blog/resenha-biblioteca-meia-noite'
-                })"
-          >
+          <div class="sidebar-post-card">
             <img
               src="Images/resenha.png"
-              alt="Resenha do livro 'A Biblioteca da Meia-Noite'"
+              alt="Resenha: A Biblioteca da Meia-Noite"
               class="post-thumb"
             />
-            <div class="post-content">
-              <h3>Resenha: A Biblioteca da Meia-Noite</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                faucibus ex sapien vitae pellentesque sem placerat. In id cursus
-                mi pretium tellus duis convallis tempus leo eu aenean sed diam.
-              </p>
+            <div class="post-info">
+              <h3 class="post-title">
+                Resenha: A Biblioteca da Meia-Noite
+              </h3>
+              <span class="post-author">Por Equipe AZ Fell</span>
               <div class="post-meta">
+                <span class="post-date">06/09/2025</span>
                 <span class="category-tag tag-resenha">Resenha</span>
-                <span class="author">Por Equipe AZ Fell</span>
-                <span class="date">06/09/2025</span>
               </div>
             </div>
-          </article>
+          </div>
 
-          <article
-            class="post-item"
-            style="cursor: pointer"
-            onclick="openModal({
-                    image: 'Images/3bodyproblem.jpeg',
-                    title: 'Autores de ficção científica que você precisa conhecer',
-                    content: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-                    tag: 'Dica de Leitura',
-                    date: '05/09/2025',
-                    author: 'Por Leitor Convidado',
-                    link: '/blog/autores-ficcao-cientifica'
-                })"
-          >
+          <div class="sidebar-post-card">
             <img
               src="Images/3bodyproblem.jpeg"
-              alt="Autores de ficção científica que você precisa conhecer"
+              alt="Resenha: O Problema dos Três Corpos"
               class="post-thumb"
             />
-            <div class="post-content">
-              <h3>Autores de ficção científica que você precisa conhecer</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                faucibus ex sapien vitae pellentesque sem placerat. In id cursus
-                mi pretium tellus duis convallis tempus leo eu aenean sed diam.
-              </p>
+            <div class="post-info">
+              <h3 class="post-title">
+                Autores de ficção científica que você precisa conhecer
+              </h3>
+              <span class="post-author">Por Leitor Convidado</span>
               <div class="post-meta">
+                <span class="post-date">05/09/2025</span>
                 <span class="category-tag tag-dicas">Dicas</span>
-                <span class="author">Por Leitor Convidado</span>
-                <span class="date">05/09/2025</span>
               </div>
             </div>
-          </article>
+          </div>
 
-          <article
-            class="post-item"
-            style="cursor: pointer"
-            onclick="openModal({
-                    image: 'Images/classicos.png',
-                    title: 'A importância de reler os clássicos',
-                    content: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-                    tag: 'Clássicos',
-                    date: '04/09/2025',
-                    author: 'Por Equipe AZ Fell',
-                    link: '/blog/importancia-reler-classicos'
-                })"
-          >
+          <div class="sidebar-post-card">
             <img
               src="Images/classicos.png"
-              alt="A importância de reler os clássicos"
+              alt="classicos"
               class="post-thumb"
             />
-            <div class="post-content">
-              <h3>A importância de reler os clássicos</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-                faucibus ex sapien vitae pellentesque sem placerat. In id cursus
-                mi pretium tellus duis convallis tempus leo eu aenean sed diam.
-              </p>
+            <div class="post-info">
+              <h3 class="post-title">
+                A importância de reler os clássicos
+              </h3>
+              <span class="post-author">Por Equipe AZ Fell</span>
               <div class="post-meta">
-                <span class="category-tag tag-classicos">Clássicos</span>
-                <span class="author">Por Equipe AZ Fell</span>
-                <span class="date">04/09/2025</span>
+                <span class="post-date">04/09/2025</span>
+                <span class="category-tag tag-dicas">Dicas</span>
               </div>
             </div>
-          </article>
-        </section>
+          </div>
 
-        <!-- Paginação -->
-        <div class="pagination">
-          <button class="page-btn prev-page">‹</button>
-          <button class="page-btn active">1</button>
-          <button class="page-btn">2</button>
-          <button class="page-btn">3</button>
-          <span class="page-dots">...</span>
-          <button class="page-btn">10</button>
-          <button class="page-btn next-page">›</button>
         </div>
-      </div>
+      </aside>
     </main>
 
     <!-- Footer -->
@@ -894,39 +775,8 @@
       </div>
     </footer>
 
-    <!-- Modal -->
-    <div id="blogModal" class="modal-overlay">
-      <div class="modal-content">
-        <button class="modal-close-btn" onclick="closeModal()">&times;</button>
-
-        <img
-          class="modal-image"
-          id="modalImage"
-          src=""
-          alt="Imagem de destaque da postagem"
-        />
-
-        <div class="modal-text-content">
-          <h2 class="modal-title" id="modalTitle"></h2>
-          <p class="modal-body" id="modalBody"></p>
-
-          <div class="modal-footer">
-            <div class="modal-meta">
-              <span class="category-tag" id="modalTag"></span>
-              <span class="modal-author" id="modalAuthor"></span>
-              <span class="modal-date" id="modalDate"></span>
-            </div>
-            <a href="#" class="read-more-btn" id="modalLink" target="_blank">
-              <svg width="20"  height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.33333 18.6667H14.6667V16H5.33333V18.6667ZM5.33333 13.3333H18.6667V10.6667H5.33333V13.3333ZM5.33333 8H18.6667V5.33333H5.33333V8ZM2.66667 24C1.93333 24 1.30556 23.7389 0.783333 23.2167C0.261111 22.6944 0 22.0667 0 21.3333V2.66667C0 1.93333 0.261111 1.30556 0.783333 0.783333C1.30556 0.261111 1.93333 0 2.66667 0H21.3333C22.0667 0 22.6944 0.261111 23.2167 0.783333C23.7389 1.30556 24 1.93333 24 2.66667V21.3333C24 22.0667 23.7389 22.6944 23.2167 23.2167C22.6944 23.7389 22.0667 24 21.3333 24H2.66667ZM2.66667 21.3333H21.3333V2.66667H2.66667V21.3333Z" fill="white"/>
-              </svg>Ler mais
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
     <script src="blog-scripts.js"></script>
+    <script src="script.js"></script>
+    <script src="noticia-script.js"></script>
   </body>
 </html>
