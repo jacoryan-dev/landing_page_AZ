@@ -1,77 +1,67 @@
-/* About Page Main Container */
-.about-main {
-    padding-top: 100px;
-    min-height: 100vh;
-    background: #0d1b2a;
-}
+/* =================================
+   Estilos da Página "Sobre Nós"
+================================= */
 
-.container {
+/* Container Principal */
+.about-main .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 120px 2rem 80px; /* Espaçamento geral */
 }
 
 .page-title {
     text-align: center;
     color: #fff;
-    font-size: 2.5em;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.page-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: #4a90e2;
-    margin: 20px auto 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 60px;
 }
 
 .section-title {
-    color: #fff;
-    font-size: 2em;
-    margin-bottom: 30px;
+    color: #3574B1; /* Usando a cor de destaque do tema */
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 40px;
     text-align: center;
 }
 
-/* History Section */
+/* --- Seção História --- */
 .history-section {
     margin-bottom: 80px;
 }
 
 .history-cards {
     display: grid;
+    /* Começa com 3 colunas em telas grandes */
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
 .history-card {
-    background: #1a2332;
+    background: #173963; /* Cor dos cards do tema */
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .history-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 8px 25px rgba(53, 116, 177, 0.3);
 }
 
 .history-card h3 {
-    color: #4a90e2;
+    color: #fff;
     margin-bottom: 15px;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 .history-card p {
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.6;
-    font-size: 0.95em;
+    color: #b8c5d6;
+    line-height: 1.7;
+    font-size: 1em;
 }
 
-/* Values Section */
+/* --- Seção Valores --- */
 .values-section {
     margin-bottom: 80px;
     text-align: center;
@@ -81,59 +71,52 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     margin: 50px 0;
-    position: relative;
 }
 
 .value-item {
-    background: rgba(74, 144, 226, 0.1);
-    border: 2px solid #4a90e2;
-    padding: 20px 40px;
+    background: #173963;
+    border: 2px solid #3574B1;
+    padding: 15px 35px;
     border-radius: 50px;
     color: #fff;
     font-weight: 500;
     font-size: 1.1em;
-    position: relative;
     transition: all 0.3s;
 }
 
 .value-item:hover {
-    background: rgba(74, 144, 226, 0.3);
+    background: #3574B1;
     transform: scale(1.05);
 }
 
 .values-middle {
     display: flex;
-    gap: 100px;
+    gap: 80px;
     justify-content: center;
     width: 100%;
 }
 
 .values-tagline {
-    background: rgba(74, 144, 226, 0.1);
-    border-radius: 50px;
-        border: 2px solid #4a90e2;
-    color: #4a90e2;
-    font-size: 1.8em;
+    color: #fff;
+    font-size: 1.5em;
     margin-top: 40px;
     font-weight: 600;
 }
 
-/* Team Section */
+/* --- Seção Equipe (Carrossel) --- */
 .team-section {
     margin-bottom: 80px;
 }
 
 .team-carousel-container {
     position: relative;
-    overflow: hidden;
-    padding: 20px 60px;
+    padding: 0 50px; /* Espaço para os botões de navegação */
 }
 
 .team-carousel {
-    overflow-x: hidden;
-    position: relative;
+    overflow: hidden;
 }
 
 .team-track {
@@ -144,12 +127,11 @@
 
 .team-card {
     min-width: 280px;
-    background: #1a2332;
+    background: #173963;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -157,7 +139,7 @@
 
 .team-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.4);
+    box-shadow: 0 10px 30px rgba(53, 116, 177, 0.4);
 }
 
 .team-card img {
@@ -166,38 +148,38 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 3px solid #4a90e2;
+    border: 3px solid #3574B1;
 }
 
 .team-card h4 {
     color: #fff;
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .team-card p {
-    color: rgba(255, 255, 255, 0.7);
+    color: #b8c5d6;
     font-size: 0.9em;
 }
 
 .card-icon {
     position: absolute;
     bottom: 15px;
-    right: 15px;
-    color: #4a90e2;
+    right: 20px;
+    color: #3574B1;
     opacity: 0.3;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(74, 144, 226, 0.9);
+    background: #3574B1;
     color: #fff;
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     font-size: 1.2em;
     cursor: pointer;
@@ -206,42 +188,33 @@
 }
 
 .carousel-btn:hover {
-    background: #4a90e2;
-    transform: translateY(-50%) scale(1.1);
-    
+    background: #4A90E2;
+}
+.carousel-btn:disabled {
+    background: #173963;
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
-.carousel-btn.prev {
-    left: 0;
-}
+.carousel-btn.prev { left: 0; }
+.carousel-btn.next { right: 0; }
 
-.carousel-btn.next {
-    right: 0;
-}
-
-/* Team Modal */
+/* --- Modal da Equipe --- */
 .team-modal {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1000;
 }
-
-.team-modal.active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+.team-modal.active { display: flex; }
 
 .modal-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -253,13 +226,14 @@
     width: 90%;
     max-height: 90vh;
     overflow-y: auto;
-    z-index: 1001;
+    z-index: 1;
+    margin: auto; /* Garante a centralização */
 }
 
 .modal-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     background: transparent;
     border: none;
     color: #fff;
@@ -274,26 +248,21 @@
     border-radius: 50%;
     transition: background 0.3s;
 }
-
-.modal-close:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
+.modal-close:hover { background: rgba(255, 255, 255, 0.1); }
 
 .modal-body {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 40px;
+    display: flex;
+    gap: 30px;
     padding: 40px;
 }
+
+.modal-image { flex: 0 0 40%; } /* Coluna da imagem */
+.modal-info { flex: 1; } /* Coluna de texto */
 
 .modal-image img {
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
-}
-
-.modal-info {
-    padding-top: 20px;
 }
 
 .modal-info h2 {
@@ -309,14 +278,28 @@
 }
 
 .modal-info p {
-    color: rgba(255, 255, 255, 0.85);
+    color: #b8c5d6;
     line-height: 1.8;
     font-size: 1em;
 }
 
-/* Responsive Design */
-@media (max-width: 968px) {
+/* ==================
+   Responsividade
+================== */
+@media (max-width: 992px) {
     .history-cards {
+        /* Cards ficam em 2 colunas no tablet */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-main .container {
+        padding: 100px 1.5rem 60px;
+    }
+
+    .history-cards {
+        /* Cards empilhados no celular */
         grid-template-columns: 1fr;
     }
     
@@ -325,51 +308,20 @@
         gap: 30px;
     }
     
-    .modal-body {
-        grid-template-columns: 1fr;
-    }
-    
-    .modal-image {
-        text-align: center;
-    }
-    
-    .modal-image img {
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .page-title {
-        font-size: 2em;
-    }
-    
-    .section-title {
-        font-size: 1.5em;
-    }
-    
     .values-tagline {
         font-size: 1.3em;
     }
-    
+
     .team-carousel-container {
-        padding: 20px 0;
+        padding: 0; /* Remove padding lateral para o carrossel ocupar mais espaço */
     }
-    
-    .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1em;
-    }
-    
-    .team-card {
-        min-width: 250px;
-    }
-    
-    .modal-content {
-        width: 95%;
-    }
-    
+
     .modal-body {
+        /* Empilha a imagem e o texto do modal */
+        flex-direction: column;
         padding: 25px;
     }
+
+    .modal-info h2 { font-size: 1.8em; }
+    .modal-info h3 { font-size: 1.1em; }
 }
