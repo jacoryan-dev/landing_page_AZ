@@ -1,31 +1,31 @@
-/* =================================
-   Estilos da Página "Sobre Nós"
-================================= */
-
 /* Container Principal */
 .about-main .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 120px 2rem 80px; /* Espaçamento geral */
+    padding: 120px 2rem 80px; 
 }
 
 .page-title {
     text-align: center;
-    color: #fff;
+    color: #3574B1;
     font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 60px;
+        text-decoration: underline;
+    text-decoration-color: #fff;
 }
 
 .section-title {
-    color: #3574B1; /* Usando a cor de destaque do tema */
+    color: #3574B1; 
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 40px;
-    text-align: center;
+    justify-content: left;
+    text-decoration: underline;
+    text-decoration-color: #fff;
 }
 
-/* --- Seção História --- */
+/* Seção História */
 .history-section {
     margin-bottom: 80px;
 }
@@ -38,7 +38,7 @@
 }
 
 .history-card {
-    background: #173963; /* Cor dos cards do tema */
+    background: #173963;
     padding: 30px;
     border-radius: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -61,7 +61,7 @@
     font-size: 1em;
 }
 
-/* --- Seção Valores --- */
+/* Seção Valores */
 .values-section {
     margin-bottom: 80px;
     text-align: center;
@@ -99,20 +99,24 @@
 }
 
 .values-tagline {
+    background: #051427;
+    border: 3px solid #294766;
+    padding: 15px 35px;
+    border-radius: 50px;
     color: #fff;
     font-size: 1.5em;
     margin-top: 40px;
     font-weight: 600;
 }
 
-/* --- Seção Equipe (Carrossel) --- */
+/*Seção Equipe (Carrossel) */
 .team-section {
     margin-bottom: 80px;
 }
 
 .team-carousel-container {
     position: relative;
-    padding: 0 50px; /* Espaço para os botões de navegação */
+    padding: 0 50px;
 }
 
 .team-carousel {
@@ -164,7 +168,7 @@
 
 .card-icon {
     position: absolute;
-    bottom: 15px;
+    bottom: 5px;
     right: 20px;
     color: #3574B1;
     opacity: 0.3;
@@ -199,7 +203,7 @@
 .carousel-btn.prev { left: 0; }
 .carousel-btn.next { right: 0; }
 
-/* --- Modal da Equipe --- */
+/* Modal da Equipe */
 .team-modal {
     display: none;
     position: fixed;
@@ -227,7 +231,7 @@
     max-height: 90vh;
     overflow-y: auto;
     z-index: 1;
-    margin: auto; /* Garante a centralização */
+    margin: auto; 
 }
 
 .modal-close {
@@ -256,8 +260,8 @@
     padding: 40px;
 }
 
-.modal-image { flex: 0 0 40%; } /* Coluna da imagem */
-.modal-info { flex: 1; } /* Coluna de texto */
+.modal-image { flex: 0 0 40%; } 
+.modal-info { flex: 1; } 
 
 .modal-image img {
     width: 100%;
@@ -283,9 +287,7 @@
     font-size: 1em;
 }
 
-/* ==================
-   Responsividade
-================== */
+/* Responsividade Sobre Nós */
 @media (max-width: 992px) {
     .history-cards {
         /* Cards ficam em 2 colunas no tablet */
@@ -313,7 +315,7 @@
     }
 
     .team-carousel-container {
-        padding: 0; /* Remove padding lateral para o carrossel ocupar mais espaço */
+        padding: 0; 
     }
 
     .modal-body {

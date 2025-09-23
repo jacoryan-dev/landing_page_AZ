@@ -1,32 +1,32 @@
-// --- DADOS DA EQUIPE (AJUSTADO PARA O TEMA DE BIBLIOTECA) ---
+// DADOS DA EQUIPE
 const teamData = [
     {
         name: "Ana Oliveira",
         role: "Curadora Chefe de Conteúdo",
-        image: "https://via.placeholder.com/400x400", // Troque pelo caminho da imagem correta
-        bio: "Com uma paixão por descobrir novas vozes e resgatar clássicos esquecidos, Ana lidera nossa equipe de curadoria para garantir que apenas as melhores histórias cheguem até você. Sua missão é construir uma biblioteca diversa e inspiradora para todos os tipos de leitores."
+        image: "Images/ana.png", 
+        bio: "Vestibulum vitae iaculis nulla, at finibus sem. Cras sagittis mauris id  ante euismod tempus. Nam in lectus lorem. Aliquam mollis nisl neque, id  dictum dui imperdiet sed. Nulla tincidunt, odio sit amet mattis commodo, felis nulla feugiat leorio. Fusce  congue vehicula ex a suscipit. Cras a mi elementum, pulvinar velit vel,  congue nulla. Pellentesque consequat sem vitae pretium laoreet.  Suspendisse sodales euismod elit molestie finibus. Aliquam erat volutpat. Integer ultrices eros sit amet nunc commodo  commodo. Donec  pulvinar nibh vitae ipsum eleifend condimentum."
     },
     {
-        name: "Carlos Silva",
-        role: "Especialista em Clássicos",
-        image: "https://via.placeholder.com/400x400", // Troque pelo caminho da imagem correta
-        bio: "Carlos é nosso guardião da literatura clássica. Com profundo conhecimento em obras que moldaram gerações, ele seleciona e contextualiza os grandes mestres, tornando suas histórias acessíveis e relevantes para o público contemporâneo."
+        name: "Alberto de Magalhões",
+        role: "CEO ",
+        image: "Images/betinho.png", 
+        bio: "Vestibulum vitae iaculis nulla, at finibus sem. Cras sagittis mauris id  ante euismod tempus. Nam in lectus lorem. Aliquam mollis nisl neque, id  dictum dui imperdiet sed. Nulla tincidunt, odio sit amet mattis commodo, felis nulla feugiat leorio. Fusce  congue vehicula ex a suscipit. Cras a mi elementum, pulvinar velit vel,  congue nulla. Pellentesque consequat sem vitae pretium laoreet.  Suspendisse sodales euismod elit molestie finibus. Aliquam erat volutpat. Integer ultrices eros sit amet nunc commodo  commodo. Donec  pulvinar nibh vitae ipsum eleifend condimentum."
     },
     {
         name: "Marina Santos",
         role: "Editora de Ficção Científica",
-        image: "https://via.placeholder.com/400x400", // Troque pelo caminho da imagem correta
-        bio: "Viajante de mundos imaginários, Marina é a especialista que traz as mais incríveis sagas de ficção científica e fantasia para a nossa plataforma. Ela está sempre em busca de novas realidades para expandir os horizontes dos nossos leitores."
+        image: "Images/img1-blog.jpg", 
+        bio: "Vestibulum vitae iaculis nulla, at finibus sem. Cras sagittis mauris id  ante euismod tempus. Nam in lectus lorem. Aliquam mollis nisl neque, id  dictum dui imperdiet sed. Nulla tincidunt, odio sit amet mattis commodo, felis nulla feugiat leorio. Fusce  congue vehicula ex a suscipit. Cras a mi elementum, pulvinar velit vel,  congue nulla. Pellentesque consequat sem vitae pretium laoreet.  Suspendisse sodales euismod elit molestie finibus. Aliquam erat volutpat. Integer ultrices eros sit amet nunc commodo  commodo. Donec  pulvinar nibh vitae ipsum eleifend condimentum."
     },
     {
         name: "João Pereira",
         role: "Gerente de Comunidade",
-        image: "https://via.placeholder.com/400x400", // Troque pelo caminho da imagem correta
-        bio: "João é a ponte entre nossa biblioteca e nossos leitores. Ele organiza clubes do livro, debates com autores e garante que a comunidade esteja sempre engajada e conectada através do poder das histórias. Sua paixão é criar um espaço acolhedor para todos."
+        image: "Images/joao.jpg",
+        bio: "Vestibulum vitae iaculis nulla, at finibus sem. Cras sagittis mauris id  ante euismod tempus. Nam in lectus lorem. Aliquam mollis nisl neque, id  dictum dui imperdiet sed. Nulla tincidunt, odio sit amet mattis commodo, felis nulla feugiat leorio. Fusce  congue vehicula ex a suscipit. Cras a mi elementum, pulvinar velit vel,  congue nulla. Pellentesque consequat sem vitae pretium laoreet.  Suspendisse sodales euismod elit molestie finibus. Aliquam erat volutpat. Integer ultrices eros sit amet nunc commodo  commodo. Donec  pulvinar nibh vitae ipsum eleifend condimentum."
     }
 ];
 
-// --- LÓGICA DO CARROSSEL DA EQUIPE ---
+// LÓGICA DO CARROSSEL DA EQUIPE
 const teamTrack = document.querySelector('.team-track');
 const teamCards = document.querySelectorAll('.team-card');
 let currentSlide = 0;
@@ -52,7 +52,7 @@ function moveCarousel(direction) {
         currentSlide = maxSlide;
     }
     
-    // O cálculo agora é dinâmico, baseado no tamanho real do card e no gap do CSS
+    // O cálculo baseado no tamanho real do card e no gap do CSS
     const cardWidth = teamCards[0].offsetWidth;
     const gap = parseInt(window.getComputedStyle(teamTrack).gap) || 30;
     const translateX = currentSlide * -(cardWidth + gap);
@@ -60,12 +60,12 @@ function moveCarousel(direction) {
     teamTrack.style.transform = `translateX(${translateX}px)`;
 }
 
-// --- LÓGICA DO MODAL DA EQUIPE ---
+//LÓGICA DO MODAL DA EQUIPE
 function openTeamModal(index) {
     const modal = document.getElementById('teamModal');
     if (!modal) return;
 
-    // Popula o modal com os dados do membro da equipe selecionado
+    // Preenche o modal com os dados do membro da equipe selecionado
     modal.querySelector('#modalImage').src = teamData[index].image;
     modal.querySelector('#modalImage').alt = `Foto de ${teamData[index].name}`;
     modal.querySelector('#modalName').textContent = teamData[index].name;
