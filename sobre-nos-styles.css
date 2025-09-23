@@ -1,0 +1,375 @@
+/* About Page Main Container */
+.about-main {
+    padding-top: 100px;
+    min-height: 100vh;
+    background: #0d1b2a;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #4a90e2;
+    margin: 20px auto 0;
+}
+
+.section-title {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* History Section */
+.history-section {
+    margin-bottom: 80px;
+}
+
+.history-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.history-card {
+    background: #1a2332;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.history-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+}
+
+.history-card h3 {
+    color: #4a90e2;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.history-card p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+/* Values Section */
+.values-section {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.values-flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 50px 0;
+    position: relative;
+}
+
+.value-item {
+    background: rgba(74, 144, 226, 0.1);
+    border: 2px solid #4a90e2;
+    padding: 20px 40px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1em;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.value-item:hover {
+    background: rgba(74, 144, 226, 0.3);
+    transform: scale(1.05);
+}
+
+.values-middle {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    width: 100%;
+}
+
+.values-tagline {
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: 50px;
+        border: 2px solid #4a90e2;
+    color: #4a90e2;
+    font-size: 1.8em;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+/* Team Section */
+.team-section {
+    margin-bottom: 80px;
+}
+
+.team-carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 60px;
+}
+
+.team-carousel {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.team-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease;
+}
+
+.team-card {
+    min-width: 280px;
+    background: #1a2332;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.4);
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #4a90e2;
+}
+
+.team-card h4 {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9em;
+}
+
+.card-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #4a90e2;
+    opacity: 0.3;
+    font-size: 1.5em;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(74, 144, 226, 0.9);
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.carousel-btn:hover {
+    background: #4a90e2;
+    transform: translateY(-50%) scale(1.1);
+    
+}
+
+.carousel-btn.prev {
+    left: 0;
+}
+
+.carousel-btn.next {
+    right: 0;
+}
+
+/* Team Modal */
+.team-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.team-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    background: #1a2332;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1001;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 40px;
+    padding: 40px;
+}
+
+.modal-image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.modal-info {
+    padding-top: 20px;
+}
+
+.modal-info h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.modal-info h3 {
+    color: #4a90e2;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.modal-info p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .history-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-middle {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-image {
+        text-align: center;
+    }
+    
+    .modal-image img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2em;
+    }
+    
+    .section-title {
+        font-size: 1.5em;
+    }
+    
+    .values-tagline {
+        font-size: 1.3em;
+    }
+    
+    .team-carousel-container {
+        padding: 20px 0;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+    }
+    
+    .team-card {
+        min-width: 250px;
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+    
+    .modal-body {
+        padding: 25px;
+    }
+}

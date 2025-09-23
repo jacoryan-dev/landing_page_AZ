@@ -1,4 +1,4 @@
-// Alternar o menu de compartilhamento
+// Toggle Share Menu
 function toggleShareMenu(button) {
     const dropdown = button.nextElementSibling;
     const allDropdowns = document.querySelectorAll('.share-dropdown');

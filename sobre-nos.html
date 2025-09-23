@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noticias | AZ Fell</title>
-    <link
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - AZ Fell</title>
+     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="noticia-styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sobre-nos-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
     <!-- Barra de Navegação -->
     <header>
       <div class="header-container">
@@ -194,256 +191,106 @@
       </div>
     </header>
 
-    <!-- Artigo em Destaque -->
-    <main class="article-layout">
-      <article class="article-content">
-        <h1 class="article-title">
-          Resenha: O clássico que você precisa ler
-        </h1>
+    <main class="about-main">
+        <div class="container">
+            <h1 class="page-title">Sobre Nós</h1>
 
-        <div class="article-meta">
-          <div class="author-info">
-            <img
-              src="Images/betinho.png"
-              alt="Foto do autor do post"
-              class="author-avatar"
-            />
-            <div class="author-details">
-              <span class="author-name">Por Equipe AZ Fell</span>
-              <span class="publish-date">08/09/2025</span>
-            </div>
-          </div>
-          <span class="category-tag tag-resenha">Resenha</span>
+            <section class="history-section">
+                <h2 class="section-title">Nossa História</h2>
+                <div class="history-cards">
+                    <div class="history-card">
+                        <h3>Como surgiu a ideia</h3>
+                        <p>A paixão pelos livros é o nosso ponto de partida. Vestibulum vitae iaculis nulla, et finibus sem. Cras sagittis mauris ut ante pulvinar aliquet. Nam in lectus lorem. Aliquam mollis nisl tempus fringilla varius. Nullam vitae purus imperdiet sed.</p>
+                    </div>
+                    <div class="history-card">
+                        <h3>Nossa Trajetória</h3>
+                        <p>De um pequeno clube do livro a uma biblioteca digital completa. Cras sagittis mauris ut ante pulvinar aliquet. Nam in lectus lorem. Aliquam mollis nisl tempus fringilla varius lacus dui imperdiet sed. Aliquam vitae porta ligula egestas non dictum dui.</p>
+                    </div>
+                    <div class="history-card">
+                        <h3>Nossa Missão</h3>
+                        <p>Conectar pessoas a novas histórias. Vestibulum vitae iaculis nulla, et finibus sem. Cras sagittis mauris ut ante pulvinar tempus. Nam in lectus lorem. Aliquam mollis nisl tempus fringilla neque, id dictum dui imperdiet sed.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="values-section">
+                <h2 class="section-title">Nossos Valores</h2>
+                <div class="values-flowchart">
+                    <div class="value-item top">
+                        <span>Acesso à Cultura</span>
+                    </div>
+                    <div class="values-middle">
+                        <div class="value-item left">
+                            <span>Inovação</span>
+                        </div>
+                        <div class="value-item right">
+                            <span>Compromisso com o Leitor</span>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="values-tagline">Você e suas histórias favoritas na AZ Fell</h3>
+            </section>
+
+            <section class="team-section">
+                <h2 class="section-title">Nossa Equipe</h2>
+                <div class="team-carousel-container">
+                    <button class="carousel-btn prev" onclick="moveCarousel(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="team-carousel">
+                        <div class="team-track">
+                            <div class="team-card" onclick="openTeamModal(0)">
+                                <img src="Images/betinho.png" alt="Foto de Ana Oliveira">
+                                <h4>Ana Oliveira</h4>
+                                <p>Curadora Chefe de Conteúdo</p>
+                                <i class="fas fa-book-open card-icon"></i>
+                            </div>
+                            <div class="team-card" onclick="openTeamModal(1)">
+                                <img src="https://via.placeholder.com/200x200" alt="Foto de Carlos Silva">
+                                <h4>Carlos Silva</h4>
+                                <p>Especialista em Clássicos</p>
+                                <i class="fas fa-book-open card-icon"></i>
+                            </div>
+                            <div class="team-card" onclick="openTeamModal(2)">
+                                <img src="https://via.placeholder.com/200x200" alt="Foto de Marina Santos">
+                                <h4>Marina Santos</h4>
+                                <p>Editora de Ficção Científica</p>
+                                <i class="fas fa-book-open card-icon"></i>
+                            </div>
+                            <div class="team-card" onclick="openTeamModal(3)">
+                                <img src="https://via.placeholder.com/200x200" alt="Foto de João Pereira">
+                                <h4>João Pereira</h4>
+                                <p>Gerente de Comunidade</p>
+                                <i class="fas fa-book-open card-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" onclick="moveCarousel(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
         </div>
-
-        <!-- Compartilhamento -->
-        <div class="share-wrapper">
-          <button class="btn-share" onclick="toggleShareMenu(this)">
-            <i class="fas fa-share-alt"></i> Compartilhar
-          </button>
-          <div class="share-dropdown">
-            <a href="#" class="share-item"
-              ><i class="fab fa-whatsapp"></i> </a
-            >
-            <a href="#" class="share-item"
-              ><i class="fab fa-instagram"></i></a
-            >
-            <a href="#" class="share-item"
-              ><i class="fab fa-x-twitter"></i>X</a
-            >
-            <a href="#" class="share-item"
-              ><i class="fas fa-link"></i></a
-            >
-            <a href="#" class="share-item"
-              ><i class="fas fa-envelope"></i></a
-            >
-          </div>
-        </div>
-
-
-        <figure class="article-image">
-          <img
-            src="Images/img1-blog.jpg"
-            alt="Imagem ilustrativa do artigo"
-          />
-          <figcaption>Imagem ilustrativa.</figcaption>
-        </figure>
-
-        <div class="article-body">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lectus  lectus, 
-            pulvinar vel congue sit amet, tempus vitae neque. Etiam pharetra consequat nulla. 
-            Nunc laoreet lacus ac dui eleifend, luctus bibendum  arcu tempus. 
-            Donec non mi at dui consectetur faucibus in ut velit. 
-            Vestibulum velit libero, tincidunt et hendrerit at, fermentum nec enim.  
-            In congue ante eget dui efficitur malesuada nec a nibh. 
-            Vestibulum sit  amet justo enim. Fusce vulputate nulla ut blandit tristique. 
-            Phasellus  mattis, dolor id maximus dapibus, nulla felis hendrerit velit, sodales  volutpat ante leo eu erat. 
-          </p>
-
-          <p>
-            Nulla non enim neque. Etiam sem odio, iaculis ut vehicula id, sodales sed velit. 
-            Maecenas dapibus neque id leo  viverra, at bibendum purus blandit. 
-            Vivamus nulla ante, congue id metus  sed, viverra commodo sapien. 
-            Suspendisse congue, justo eu rutrum  sagittis, erat quam pellentesque sapien, quis placerat dolor tellus a  leo.
-
-          </p>
-
-          <p class="highlight">
-            Orci varius natoque penatibus et magnis 
-            dis parturient montes, nascetur ridiculus mus. 
-            Integer in tortor accumsan fringilla.
-          </p>
-
-          <p>
-            In vehicula lectus feugiat orci hendrerit, quis posuere massa tincidunt. 
-            Quisque pharetra ante sit amet luctus luctus. 
-            Donec pulvinar at diam  non tempus. Nunc leo leo, lobortis nec ipsum quis, 
-            venenatis suscipit  magna. Etiam molestie volutpat augue eu condimentum. 
-            Suspendisse  potenti. Vestibulum vel varius risus. Pellentesque habitant morbi  
-            tristique senectus et netus et malesuada fames ac turpis egestas. Ut mi  augue, 
-            mollis in dignissim ac, maximus ac massa.
-
-          </p>
- 
-          <p>
-        Vestibulum vitae iaculis nulla, at finibus sem. Cras sagittis mauris id  ante euismod tempus. Nam in lectus lorem. Aliquam mollis nisl neque, id  dictum dui imperdiet sed. Nulla tincidunt, odio sit amet mattis commodo, felis nulla feugiat leo, in lacinia nulla justo non tortor. Fusce  congue vehicula ex a suscipit. Cras a mi elementum, pulvinar velit vel,  congue nulla. Pellentesque consequat sem vitae pretium laoreet.  Suspendisse sodales euismod elit molestie finibus.
-          </p>
-        </div>
-
-        <!-- Compartilhamento -->
-        <div class="share-wrapper">
-          <button class="btn-share" onclick="toggleShareMenu(this)">
-            <i class="fas fa-share-alt"></i> Compartilhar
-          </button>
-          <div class="share-dropdown">
-            <a href="#" class="share-item"
-              ><i class="fab fa-whatsapp"></i> </a
-            >
-            <a href="#" class="share-item"
-              ><i class="fab fa-instagram"></i></a
-            >
-            <a href="#" class="share-item"
-              ><i class="fab fa-x-twitter"></i>X</a
-            >
-            <a href="#" class="share-item"
-              ><i class="fas fa-link"></i></a
-            >
-            <a href="#" class="share-item"
-              ><i class="fas fa-envelope"></i></a
-            >
-          </div>
-        </div>
-      </article>
-
-        <!-- Barra lateral -->
-      <aside class="sidebar">
-        <h2 class="sidebar-title">Leia também</h2>
-
-        <div class="sidebar-posts">
-          <div class="sidebar-post-card">
-            <img
-              src="Images/img2-blog.jpg"
-              alt="Livros em uma estante"
-              class="post-thumb"
-            />
-            <div class="post-info">
-              <h3 class="post-title">Como organizar sua estante virtual</h3>
-              <span class="post-author">Por Leitor Convidado</span>
-              <div class="post-meta">
-                <span class="post-date">08/09/2025</span>
-                 <span class="category-tag tag-dicas">Dicas</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="sidebar-post-card">
-            <img
-              src="Images/img3-blog.jpg"
-              alt="Pilha de livros"
-              class="post-thumb"
-            />
-            <div class="post-info">
-              <h3 class="post-title">Os grandes lançamentos de Setembro</h3>
-              <span class="post-author">Por Equipe AZ Fell</span>
-              <div class="post-meta">
-                <span class="post-date">08/09/2025</span>
-                <span class="category-tag tag-lancamentos">Novidade</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="sidebar-post-card">
-            <img
-              src="Images/tendencias.jpg"
-              alt="Tendências literárias"
-              class="post-thumb"
-            />
-            <div class="post-info">
-              <h3 class="post-title">
-                As 5 tendências literárias para 2025
-              </h3>
-              <span class="post-author">Por Equipe AZ Fell</span>
-              <div class="post-meta">
-                <span class="post-date">06/09/2025</span>
-                <span class="category-tag tag-noticia">Notícia</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="sidebar-post-card">
-            <img
-              src="Images/clube-do-livro.jpg"
-              alt="Pessoa lendo um e-reader"
-              class="post-thumb"
-            />
-            <div class="post-info">
-              <h3 class="post-title">Como criar um clube do livro online</h3>
-              <span class="post-author">Por Leitor Convidado</span>
-              <div class="post-meta">
-                <span class="post-date">06/09/2025</span>
-                <span class="category-tag tag-dicas">Dicas</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="sidebar-post-card">
-            <img
-              src="Images/resenha.png"
-              alt="Resenha: A Biblioteca da Meia-Noite"
-              class="post-thumb"
-            />
-            <div class="post-info">
-              <h3 class="post-title">
-                Resenha: A Biblioteca da Meia-Noite
-              </h3>
-              <span class="post-author">Por Equipe AZ Fell</span>
-              <div class="post-meta">
-                <span class="post-date">06/09/2025</span>
-                <span class="category-tag tag-resenha">Resenha</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="sidebar-post-card">
-            <img
-              src="Images/3bodyproblem.jpeg"
-              alt="Resenha: O Problema dos Três Corpos"
-              class="post-thumb"
-            />
-            <div class="post-info">
-              <h3 class="post-title">
-                Autores de ficção científica que você precisa conhecer
-              </h3>
-              <span class="post-author">Por Leitor Convidado</span>
-              <div class="post-meta">
-                <span class="post-date">05/09/2025</span>
-                <span class="category-tag tag-dicas">Dicas</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="sidebar-post-card">
-            <img
-              src="Images/classicos.png"
-              alt="classicos"
-              class="post-thumb"
-            />
-            <div class="post-info">
-              <h3 class="post-title">
-                A importância de reler os clássicos
-              </h3>
-              <span class="post-author">Por Equipe AZ Fell</span>
-              <div class="post-meta">
-                <span class="post-date">04/09/2025</span>
-                <span class="category-tag tag-dicas">Dicas</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </aside>
     </main>
+
+    <div class="team-modal" id="teamModal">
+        <div class="modal-overlay" onclick="closeTeamModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeTeamModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalName"></h2>
+                    <h3 id="modalRole"></h3>
+                    <p id="modalBio"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -774,9 +621,8 @@
         <div class="copyright"><p>EJECT © Alguns Direitos Reservados</p></div>
       </div>
     </footer>
-
-    <script src="blog-scripts.js"></script>
+    
     <script src="script.js"></script>
-    <script src="noticia-script.js"></script>
-  </body>
+    <script src="sobre-nos-script.js"></script>
+</body>
 </html>
