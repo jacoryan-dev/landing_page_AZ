@@ -1,5 +1,25 @@
+// Funcionalidade do carrossel
+let currentSlide = 0;
 
+function moveCarousel(direction) {
+  const track = document.querySelector(".carousel-track");
+  const cards = document.querySelectorAll(".featured-card");
+  const cardWidth = cards[0].offsetWidth + 30;
 
+  currentSlide += direction;
+
+  // Determinar quantos cards são visíveis com base na largura da tela
+  let visibleCards = 3;
+  if (window.innerWidth <= 968) visibleCards = 2;
+  if (window.innerWidth <= 768) visibleCards = 1;
+
+  const maxSlide = cards.length - visibleCards;
+
+  if (currentSlide < 0) currentSlide = 0;
+  if (currentSlide > maxSlide) currentSlide = maxSlide;
+
+  track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+}
 
 // Funcionalidade de dropdown (abrir/fechar)
 function toggleDropdown(type) {
