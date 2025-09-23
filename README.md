@@ -1,5 +1,10 @@
 # Landing Page AZ
 
+## 🌐 Acesse o site
+
+O projeto está disponível em produção pelo domínio:  
+👉 [azfell.vercel.app](https://azfell.vercel.app/)
+
 ## Tecnologias Utilizadas
 
 <p align="left">
